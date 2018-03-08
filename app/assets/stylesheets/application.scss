@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body{
+	padding: none;
+}
+
+.signInModule{
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+.editMovieModule{
+	padding-left: 40px;
+}
