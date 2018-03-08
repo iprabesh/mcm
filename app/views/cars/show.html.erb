@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 
 <p>
   <strong>Brand:</strong>
@@ -22,8 +21,15 @@
 
 <p>
   <strong>Image:</strong>
-  <%= @car.image %>
+  <%= image_tag(@car) %>
 </p>
+
+
+<p>
+  <strong>User:</strong>
+  <%= @car.user.email %>
+</p>
+
 
 <%= link_to 'Edit', edit_car_path(@car) %> |
 <%= link_to 'Back', cars_path %>

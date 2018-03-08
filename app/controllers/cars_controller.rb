@@ -1,10 +1,14 @@
 class CarsController < ApplicationController
   before_action :set_car, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, except: [:index, :show]
   # GET /cars
   # GET /cars.json
   def index
     @cars = Car.all
+  end
+
+  def home
+  
   end
 
   # GET /cars/1
@@ -14,7 +18,7 @@ class CarsController < ApplicationController
 
   # GET /cars/new
   def new
-    @car = Car.new
+    @car = current_user.cars.build
   end
 
   # GET /cars/1/edit
@@ -24,7 +28,7 @@ class CarsController < ApplicationController
   # POST /cars
   # POST /cars.json
   def create
-    @car = Car.new(car_params)
+    @car = current_user.cars.build(car_params)
 
     respond_to do |format|
       if @car.save
