@@ -10,17 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180308052139) do
+ActiveRecord::Schema.define(version: 20180308071838) do
 
   create_table "cars", force: :cascade do |t|
     t.string   "brand"
     t.string   "model"
     t.integer  "price"
     t.integer  "milage"
-    t.string   "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
     t.integer  "user_id"
+    t.string   "imageclip_file_name"
+    t.string   "imageclip_content_type"
+    t.integer  "imageclip_file_size"
+    t.datetime "imageclip_updated_at"
   end
 
   create_table "users", force: :cascade do |t|

@@ -1,6 +1,7 @@
 class CarsController < ApplicationController
   before_action :set_car, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
+  
   # GET /cars
   # GET /cars.json
   def index
@@ -29,7 +30,6 @@ class CarsController < ApplicationController
   # POST /cars.json
   def create
     @car = current_user.cars.build(car_params)
-
     respond_to do |format|
       if @car.save
         format.html { redirect_to @car, notice: 'Car was successfully created.' }
@@ -73,6 +73,6 @@ class CarsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def car_params
-      params.require(:car).permit(:brand, :model, :price, :milage, :image)
+      params.require(:car).permit(:brand, :model, :price, :milage, :image, :imageclip)
     end
 end
