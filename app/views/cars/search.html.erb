@@ -1,0 +1,18 @@
+<%= render 'shared/navbar' %>
+<div class = "foundNotice">
+  <strong>Looks Like We have something you are looking for!!!</strong>
+</div>
+
+<div class="row">
+  <% @cars.each do |car| %>
+    <div class="col-sm-6 col-md-3">
+      <div class ="thumbnail">
+        <%= link_to (image_tag car.imageclip.url(:medium), class: 'image'), car %>
+        <div class= "caption">
+          <strong><%= car.model %> - <span>Great Price!</span></strong>
+          <p>This car is a great purchase</p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
