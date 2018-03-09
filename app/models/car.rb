@@ -1,4 +1,7 @@
 class Car < ApplicationRecord
+	#For SearchKick
+	searchkick 
+
 	belongs_to :user
 
 	has_attached_file :imageclip, styles: { medium: "300x300>", thumb: "100x100>" }

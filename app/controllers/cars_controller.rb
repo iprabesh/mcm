@@ -2,6 +2,15 @@ class CarsController < ApplicationController
   before_action :set_car, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
   
+
+  def search
+    if params[:search].present?
+      @cars = Car.search(params[:search])
+    else
+      @cars = Car.all
+    end
+  end
+
   # GET /cars
   # GET /cars.json
   def index
@@ -24,6 +33,11 @@ class CarsController < ApplicationController
 
   # GET /cars/1/edit
   def edit
+    @car = Car.find(params[:id])
+    if(@car.user != current_user)
+      redirect_to @car, notice: "You can't edit it fool"
+    end
+
   end
 
   # POST /cars
@@ -52,7 +66,7 @@ class CarsController < ApplicationController
         format.html { render :edit }
         format.json { render json: @car.errors, status: :unprocessable_entity }
       end
-    end
+    end    
   end
 
   # DELETE /cars/1
