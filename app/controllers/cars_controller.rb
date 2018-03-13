@@ -18,7 +18,6 @@ class CarsController < ApplicationController
   end
 
   def home
-  
   end
 
   # GET /cars/1
@@ -62,6 +61,7 @@ class CarsController < ApplicationController
   def update
     respond_to do |format|
       if @car.update(car_params)
+        fail
         format.html { redirect_to @car, notice: 'Car was successfully updated.' }
         format.json { render :show, status: :ok, location: @car }
       else
