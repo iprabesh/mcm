@@ -7,4 +7,12 @@ class Car < ApplicationRecord
 	has_attached_file :imageclip, styles: { medium: "300x300>", thumb: "100x100>" }
   	validates_attachment_content_type :imageclip, content_type: /\Aimage\/.*\z/
 
+  	validates :brand, presence: true
+
+  	validates :model, presence: true
+
+  	validates :milage, presence: true
+
+  	validates :price, numericality: {greater_than_or_equal_to: 0}
+
 end
