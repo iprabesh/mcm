@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: pamatya1s
+  api_key: '336493746536294'
+  api_secret: 1TbT8D0CaiPuoJ0HF48Ai2puOsk
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: pamatya1s
+  api_key: '336493746536294'
+  api_secret: 1TbT8D0CaiPuoJ0HF48Ai2puOsk
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: pamatya1s
+  api_key: '336493746536294'
+  api_secret: 1TbT8D0CaiPuoJ0HF48Ai2puOsk
+  enhance_image_tag: true
+  static_image_support: false
