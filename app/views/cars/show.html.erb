@@ -1,41 +1,43 @@
-<div class ="panel panel-default">
+<div class ="panel panel">
   <div class="panel-body">
     <div class="row">
         <div class="col-md-4">
 
     <%= image_tag @car.imageclip.url(:medium) %>
     <div class="table-responsive">
-            <table class="table">
-<tr>
-  <tr>
-    <td><strong>Brand:</strong></td>
-    <td><%= @car.brand %></td>
-  </tr>
+    <table class="table">
+      <tr>
+        <tr>
+          <td><strong>Brand:</strong></td>
+          <td><%= @car.brand %></td>
+        </tr>
 
-  <tr>
-    <td><strong>Model:</strong></td>
-    <td><%= @car.model %></td>
-  </tr>
+        <tr>
+          <td><strong>Model:</strong></td>
+          <td><%= @car.model %></td>
+        </tr>
 
-  <tr>
-    <td><strong>Price:</strong></td>
-    <td><%= @car.price %></td>
-  </tr>
+        <tr>
+          <td><strong>Price:</strong></td>
+          <td><%= @car.price %></td>
+        </tr>
 
-  <tr>
-    <td><strong>Milage:</strong></td>
-    <td><%= @car.milage %></td>
-  </tr>
+        <tr>
+          <td><strong>Milage:</strong></td>
+          <td><%= @car.milage %></td>
+        </tr>
 
-  <tr>
-    <td><strong>Seller:</strong></td>
-    <td><%= @car.user.email %></td>
-  </tr>
-</tr>
-</table>
-</div>
-</div>
-</div>
+        <tr>  
+        <div class = "sellerModule">
+          <td><strong class="btn btn-lg btn-primary">Contact Seller</strong></td>
+          <!--<td><%= @car.user.email %></td> -->
+          <td></td>
+        </div>
+       </tr>
+      </table>
+     </div>
+    </div>
+  </div>
 </div>
 
 <div class = "editMovieModule">

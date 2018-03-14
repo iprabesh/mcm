@@ -13,7 +13,6 @@
  *= require_tree .
  *= require_self
  */
-@import "bootstrap-sprockets";
 @import "bootstrap";
 
 body{
@@ -22,7 +21,8 @@ body{
 
 .signInModule{
 	text-align: center;
-	padding-bottom: 20px;
+	padding-bottom: 30px;
+	padding-top: 10px;
 }
 
 .editMovieModule{
@@ -31,4 +31,23 @@ body{
 
 .foundNotice{
 	text-align: center;
+	color: green;
+	letter-spacing: 2px;
+	font-weight: bold;
+	font-size: 12px;
+	padding-bottom: 20px;
 }
+
+.sellerModule{
+	
+}
+
+.showModule{
+	text-align: center;
+}
+
+
+
+
+
+
